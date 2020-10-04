@@ -9,11 +9,11 @@
     </settings>
 
     <typeAliases>
-        <package name="com.moking.domain"/>
+        <package name="com.moking.settings.domain"/>
     </typeAliases>
 
     <mappers>
-        <package name="com.moking.dao"/>
+        <package name="com.moking.settings.dao"/>
     </mappers>
 
 </configuration>

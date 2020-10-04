@@ -23,11 +23,12 @@
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-        <property name="basePackage" value="com.moking.dao"/>
+        <property name="basePackage" value="com.moking.settings.dao"/>
     </bean>
 
-    <context:component-scan base-package="com.moking.service"/>
-    <context:component-scan base-package="com.moking.domain"/>
+    <context:component-scan base-package="com.moking.settings.service"/>
+    <context:component-scan base-package="com.moking.settings.domain"/>
+    <context:component-scan base-package="com.moking.utils"/>
 
     <!--事务配置，注解配置，aspectj配置-->
 

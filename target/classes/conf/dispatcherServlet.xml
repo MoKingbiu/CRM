@@ -20,6 +20,7 @@
    <!--解决中央调度器处理静态资源,在中央调度器使用“/”时使用(springmvc自己处理，推荐)-->
     <!--<mvc:resources mapping="/static/**" location="/static/"/>-->
 
-    <context:component-scan base-package="com.moking.controller"/>
+    <context:component-scan base-package="com.moking.settings.web.controller"/>
+    <context:component-scan base-package="com.moking.exception"/>
 
 </beans>
