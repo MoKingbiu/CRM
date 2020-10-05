@@ -25,10 +25,13 @@ public class UserServiceImpl implements UserService {
             throw new loginException("账号密码错误");
         }
 
-        //待解决
         String userTime=user.getExpireTime();
         String newTime= DateTimeUtil.getSysTime();
-        if(userTime.compareTo(newTime)<0){
+        int a=userTime.compareTo(newTime);
+        System.out.println(userTime);
+        System.out.println(newTime);
+        System.out.println(a);
+        if(a<0){
             throw new loginException("账号已过期");
         }
 
@@ -36,7 +39,6 @@ public class UserServiceImpl implements UserService {
             throw new loginException("账号已被封锁");
         }
 
-        //待解决
         if(!user.getAllowIps().contains(ip)){
             throw new loginException("ip地址受限");
         }
