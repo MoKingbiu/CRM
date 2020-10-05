@@ -27,11 +27,7 @@ public class UserServiceImpl implements UserService {
 
         String userTime=user.getExpireTime();
         String newTime= DateTimeUtil.getSysTime();
-        int a=userTime.compareTo(newTime);
-        System.out.println(userTime);
-        System.out.println(newTime);
-        System.out.println(a);
-        if(a<0){
+        if(userTime.compareTo(newTime)<0){
             throw new loginException("账号已过期");
         }
 

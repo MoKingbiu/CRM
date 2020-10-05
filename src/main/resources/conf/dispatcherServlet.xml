@@ -13,12 +13,20 @@
 
     <!--注解驱动@RequestMapper-->
     <mvc:annotation-driven/>
+    <!--登录拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**/*.do"/>
+            <mvc:exclude-mapping path="/settings/user/login.do"/>
+            <bean class="com.moking.handle.loginHandle"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
     <!--解决中央调度器处理静态资源,在中央调度器使用“/”时使用.(转发给tomcat的default处理)-->
     <!--<mvc:default-servlet-handler/>-->
 
    <!--解决中央调度器处理静态资源,在中央调度器使用“/”时使用(springmvc自己处理，推荐)-->
-    <!--<mvc:resources mapping="/static/**" location="/static/"/>-->
+    <!--<mvc:resources mapping="/image/**" location="/image/"/>-->
 
     <context:component-scan base-package="com.moking.settings.web.controller"/>
     <context:component-scan base-package="com.moking.exception"/>

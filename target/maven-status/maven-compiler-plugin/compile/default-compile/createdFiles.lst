@@ -1,9 +1,11 @@
+com\moking\handle\loginHandle.class
 com\moking\exception\loginException.class
 com\moking\exception\handle\ExceptionHandle.class
 com\moking\settings\service\UserService.class
 com\moking\settings\web\controller\UserController.class
 com\moking\utils\MD5Util.class
 com\moking\settings\domain\User.class
+com\moking\web\filter\loginFilter.class
 com\moking\utils\DateTimeUtil.class
 com\moking\utils\UUIDUtil.class
 com\moking\settings\dao\UserDao.class
