@@ -10,10 +10,12 @@
 
     <typeAliases>
         <package name="com.moking.settings.domain"/>
+        <package name="com.moking.workbench.domain"/>
     </typeAliases>
 
     <mappers>
         <package name="com.moking.settings.dao"/>
+        <package name="com.moking.workbench.dao"/>
     </mappers>
 
 </configuration>
