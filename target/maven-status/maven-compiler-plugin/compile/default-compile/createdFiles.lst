@@ -1,5 +1,6 @@
 com\moking\handle\loginHandle.class
 com\moking\workbench\domain\ActivityRemark.class
+com\moking\vo\pageListVo.class
 com\moking\settings\web\controller\UserController.class
 com\moking\utils\MD5Util.class
 com\moking\workbench\web\controller\ActivityController.class
@@ -7,9 +8,11 @@ com\moking\settings\domain\User.class
 com\moking\workbench\service\ActivityService.class
 com\moking\utils\UUIDUtil.class
 com\moking\settings\service\impl\UserServiceImpl.class
+com\moking\workbench\dao\ActivityRemarkDao.class
 com\moking\workbench\service\impl\ActivityServiceImpl.class
 com\moking\exception\loginException.class
 com\moking\workbench\dao\ActivityDao.class
+com\moking\exception\activityDeleteException.class
 com\moking\exception\handle\ExceptionHandle.class
 com\moking\settings\service\UserService.class
 com\moking\web\filter\loginFilter.class

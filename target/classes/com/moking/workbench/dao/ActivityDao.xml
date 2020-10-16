@@ -4,6 +4,82 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.moking.workbench.dao.ActivityDao">
 
+    <insert id="save" >
+        insert into tbl_activity(
+            id,
+            owner,
+            name,
+            startDate,
+            endDate,
+            cost,
+            description,
+            createTime,
+            createBy
+        )
+        values(
+            #{id},
+            #{owner},
+            #{name},
+            #{startDate},
+            #{endDate},
+            #{cost},
+            #{description},
+            #{createTime},
+            #{createBy}
+        )
+    </insert>
 
+    <select id="pageList" resultType="com.moking.workbench.domain.Activity">
+        select
+            a.id,a.name,u.name as owner,a.startDate,a.endDate
+        from tbl_activity a
+        join tbl_user u
+        on a.owner=u.id
+        <where>
+            <if test="activity.owner!=null and activity.owner!='' ">
+                u.name like '%' #{activity.owner} '%'
+            </if>
+            <if test="activity.name!=null and activity.name!='' ">
+                and a.name like '%' #{activity.name} '%'
+            </if>
+            <if test="activity.startDate!=null and activity.startDate!='' and activity.startDate!='点击选择时间'">
+                and a.startDate &gt; #{activity.startDate}
+            </if>
+            <if test="activity.endDate!=null and activity.endDate!='' and activity.endDate!='点击选择时间'">
+                and a.endDate &lt; #{activity.endDate}
+            </if>
+        </where>
+        order by a.createTime desc
+        limit #{skipSize},#{pageSize}
+
+    </select>
+
+    <select id="getPageTotal" resultType="int">
+        select count(*) from tbl_activity a
+        join tbl_user u
+        on a.owner=u.id
+        <where>
+            <if test="activity.owner!=null and activity.owner!='' ">
+                u.name like '%' #{activity.owner} '%'
+            </if>
+            <if test="activity.name!=null and activity.name!='' ">
+                and a.name like '%' #{activity.name} '%'
+            </if>
+            <if test="activity.startDate!=null and activity.startDate!='' and activity.startDate!='点击选择时间'">
+                and a.startDate &gt; #{activity.startDate}
+            </if>
+            <if test="activity.endDate!=null and activity.endDate!='' and activity.endDate!='点击选择时间'">
+                and a.endDate &lt; #{activity.endDate}
+            </if>
+        </where>
+    </select>
+
+    <delete id="delete">
+        delete from tbl_activity
+        where id in
+        <foreach collection="array" item="id" open="(" close=")" separator="," >
+            #{id}
+        </foreach>
+    </delete>
 
 </mapper>

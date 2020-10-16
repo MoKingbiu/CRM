@@ -1,7 +1,7 @@
 package com.moking.settings.web.controller;
 
 import com.moking.settings.domain.User;
-import com.moking.settings.service.impl.UserServiceImpl;
+import com.moking.settings.service.UserService;
 import com.moking.utils.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,7 +16,7 @@ import java.util.Map;
 @RequestMapping("/settings/user")
 public class UserController {
     @Autowired
-    private UserServiceImpl userServiceImpl;
+    private UserService userServiceImpl;
 
     @RequestMapping("/login.do")
     @ResponseBody

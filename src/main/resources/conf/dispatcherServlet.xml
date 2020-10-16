@@ -11,7 +11,7 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!--注解驱动@RequestMapper-->
+    <!--注解驱动@RequestMapper,@ResponseBody-->
     <mvc:annotation-driven/>
     <!--登录拦截器-->
     <mvc:interceptors>
