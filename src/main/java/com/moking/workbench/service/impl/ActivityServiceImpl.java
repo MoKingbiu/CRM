@@ -80,4 +80,34 @@ public class ActivityServiceImpl implements ActivityService {
         }
         return flag;
     }
+
+    @Override
+    public Activity getActivityById(String id) {
+        Activity activity=activityDao.getActivityById(id);
+        return activity;
+    }
+
+    @Override
+    public boolean update(Activity activity, HttpSession session) {
+        boolean flag=false;
+        activity.setId(activity.getId());
+        activity.setEditTime(DateTimeUtil.getSysTime());
+        User user= (User) session.getAttribute("user");
+        activity.setEditBy(user.getName());
+
+        if(
+                "".equals(activity.getName()) ||
+                "".equals(activity.getOwner()) ||
+                activity.getOwner()==null ||
+                activity.getStartDate().compareTo(activity.getEndDate())>0
+        ){
+            return flag;
+        }
+
+        int count=activityDao.update(activity);
+        if(count==1){
+            flag=true;
+        }
+        return flag;
+    }
 }

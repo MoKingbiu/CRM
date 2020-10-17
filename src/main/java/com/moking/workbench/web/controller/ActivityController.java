@@ -75,4 +75,24 @@ public class ActivityController {
         }
     }
 
+    @RequestMapping("/edit.do")
+    @ResponseBody
+    public Map<String,Object> edit(String id){
+        Map<String,Object> map=new HashMap<>();
+        List ulist=userServiceImpl.getUserList();
+        Activity activity=activityServiceImpl.getActivityById(id);
+        map.put("uList",ulist);
+        map.put("ac",activity);
+        return map;
+    }
+
+    @RequestMapping("/update.do")
+    @ResponseBody
+    public Map<String, Boolean> update(Activity activity, HttpSession session){
+        boolean flag=activityServiceImpl.update(activity,session);
+        Map<String,Boolean> map=new HashMap();
+        map.put("success",flag);
+        return map;
+    }
+
 }

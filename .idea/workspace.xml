@@ -8,42 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="142f3b19-3e7d-4701-8766-fcd23ae418f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/exception/exception.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/exception/exception.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/exception/handle/ExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/exception/handle/ExceptionHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/settings/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/settings/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/settings/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/settings/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/settings/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/settings/web/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/workbench/dao/ActivityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/workbench/dao/ActivityDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/workbench/dao/ActivityDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/workbench/dao/ActivityDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/workbench/service/ActivityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/workbench/service/ActivityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/workbench/service/impl/ActivityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/workbench/service/impl/ActivityServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/workbench/web/controller/ActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/workbench/web/controller/ActivityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/conf/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conf/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/conf/dispatcherServlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conf/dispatcherServlet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/workbench/activity/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workbench/activity/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/settings/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/settings/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/settings/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/settings/web/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/dao/ActivityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/dao/ActivityDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/dao/ActivityDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/dao/ActivityDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/service/ActivityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/service/ActivityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/service/impl/ActivityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/service/impl/ActivityServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/web/controller/ActivityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/web/controller/ActivityController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/conf/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/conf/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/conf/dispatcherServlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/conf/dispatcherServlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/workbench/activity/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/workbench/activity/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/settings/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/settings/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/settings/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/settings/web/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/workbench/dao/ActivityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/workbench/dao/ActivityDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/workbench/dao/ActivityDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/workbench/dao/ActivityDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/workbench/service/ActivityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/workbench/service/ActivityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/workbench/service/impl/ActivityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/workbench/service/impl/ActivityServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/workbench/web/controller/ActivityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/workbench/web/controller/ActivityController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/conf/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/conf/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/conf/dispatcherServlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/conf/dispatcherServlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +259,8 @@
       <workItem from="1602598938804" duration="197000" />
       <workItem from="1602663540539" duration="7874000" />
       <workItem from="1602772520345" duration="2735000" />
-      <workItem from="1602854128408" duration="7241000" />
+      <workItem from="1602854128408" duration="7378000" />
+      <workItem from="1602935118278" duration="9002000" />
     </task>
     <task id="LOCAL-00001" summary="准备部署">
       <created>1601644811668</created>
@@ -353,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602314267890</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="活动删除功能">
+      <created>1602861846440</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1602861846440</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,17 +349,18 @@
     <MESSAGE value="登录功能修改" />
     <MESSAGE value="防止恶意登陆模块" />
     <MESSAGE value="小更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="小更新" />
+    <MESSAGE value="活动删除功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="活动删除功能" />
   </component>
   <component name="WindowStateProjectService">
     <state x="219" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601822980977">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="219" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601822980977" />
-    <state x="527" y="19" key="#com.intellij.ide.util.MemberChooser" timestamp="1602860937404">
+    <state x="527" y="19" key="#com.intellij.ide.util.MemberChooser" timestamp="1602946689848">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="527" y="19" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1602860937404" />
+    <state x="527" y="19" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1602946689848" />
     <state x="549" y="323" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1601696957478">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -389,82 +369,82 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="433" y="109" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601819380085" />
-    <state x="245" y="0" key="CommitChangelistDialog2" timestamp="1602314266650">
+    <state x="245" y="0" key="CommitChangelistDialog2" timestamp="1602861845429">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="245" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602314266650" />
-    <state width="1218" height="708" key="DebuggerActiveHint" timestamp="1602857113008">
+    <state x="245" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602861845429" />
+    <state width="1218" height="708" key="DebuggerActiveHint" timestamp="1602944997540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1218" height="708" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1602857113008" />
+    <state width="1218" height="708" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1602944997540" />
     <state x="495" y="71" key="FileChooserDialogImpl" timestamp="1602387406171">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="495" y="71" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602387406171" />
-    <state width="1223" height="379" key="GridCell.Tab.0.bottom" timestamp="1602861429295">
+    <state width="1223" height="379" key="GridCell.Tab.0.bottom" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602861429295" />
-    <state width="1223" height="379" key="GridCell.Tab.0.center" timestamp="1602861429295">
+    <state width="1223" height="379" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
+    <state width="1223" height="379" key="GridCell.Tab.0.center" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602861429295" />
-    <state width="1223" height="379" key="GridCell.Tab.0.left" timestamp="1602861429295">
+    <state width="1223" height="379" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
+    <state width="1223" height="379" key="GridCell.Tab.0.left" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602861429295" />
-    <state width="1223" height="379" key="GridCell.Tab.0.right" timestamp="1602861429295">
+    <state width="1223" height="379" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
+    <state width="1223" height="379" key="GridCell.Tab.0.right" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602861429295" />
-    <state width="1223" height="379" key="GridCell.Tab.1.bottom" timestamp="1602861429295">
+    <state width="1223" height="379" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
+    <state width="1223" height="379" key="GridCell.Tab.1.bottom" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602861429295" />
-    <state width="1223" height="379" key="GridCell.Tab.1.center" timestamp="1602861429295">
+    <state width="1223" height="379" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
+    <state width="1223" height="379" key="GridCell.Tab.1.center" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1602861429295" />
-    <state width="1223" height="379" key="GridCell.Tab.1.left" timestamp="1602861429295">
+    <state width="1223" height="379" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
+    <state width="1223" height="379" key="GridCell.Tab.1.left" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1602861429295" />
-    <state width="1223" height="379" key="GridCell.Tab.1.right" timestamp="1602861429295">
+    <state width="1223" height="379" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
+    <state width="1223" height="379" key="GridCell.Tab.1.right" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1602861429295" />
-    <state width="1223" height="379" key="GridCell.Tab.2.bottom" timestamp="1602861429295">
+    <state width="1223" height="379" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
+    <state width="1223" height="379" key="GridCell.Tab.2.bottom" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602861429295" />
-    <state width="1223" height="379" key="GridCell.Tab.2.center" timestamp="1602861429295">
+    <state width="1223" height="379" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
+    <state width="1223" height="379" key="GridCell.Tab.2.center" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1602861429295" />
-    <state width="1223" height="379" key="GridCell.Tab.2.left" timestamp="1602861429295">
+    <state width="1223" height="379" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
+    <state width="1223" height="379" key="GridCell.Tab.2.left" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1602861429295" />
-    <state width="1223" height="379" key="GridCell.Tab.2.right" timestamp="1602861429295">
+    <state width="1223" height="379" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
+    <state width="1223" height="379" key="GridCell.Tab.2.right" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1602861429295" />
-    <state width="1223" height="379" key="GridCell.Tab.3.bottom" timestamp="1602861429296">
+    <state width="1223" height="379" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
+    <state width="1223" height="379" key="GridCell.Tab.3.bottom" timestamp="1602947250493">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602861429296" />
-    <state width="1223" height="379" key="GridCell.Tab.3.center" timestamp="1602861429295">
+    <state width="1223" height="379" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602947250493" />
+    <state width="1223" height="379" key="GridCell.Tab.3.center" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1602861429295" />
-    <state width="1223" height="379" key="GridCell.Tab.3.left" timestamp="1602861429295">
+    <state width="1223" height="379" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
+    <state width="1223" height="379" key="GridCell.Tab.3.left" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1602861429295" />
-    <state width="1223" height="379" key="GridCell.Tab.3.right" timestamp="1602861429296">
+    <state width="1223" height="379" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
+    <state width="1223" height="379" key="GridCell.Tab.3.right" timestamp="1602947250492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="379" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1602861429296" />
+    <state width="1223" height="379" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1602947250492" />
     <state width="1011" height="349" key="GridCell.Tab.4.bottom" timestamp="1601642789960">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -521,10 +501,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="102" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1602860493271" />
-    <state x="261" y="81" key="Vcs.Push.Dialog.v2" timestamp="1602314315390">
+    <state x="261" y="81" key="Vcs.Push.Dialog.v2" timestamp="1602861855774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="261" y="81" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602314315390" />
+    <state x="261" y="81" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602861855774" />
     <state x="448" y="156" key="git4idea.merge.GitPullDialog" timestamp="1601645033672">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

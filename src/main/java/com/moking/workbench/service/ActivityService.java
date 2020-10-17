@@ -9,4 +9,6 @@ public interface ActivityService {
     boolean save(Activity activity, HttpSession session);
     pageListVo<Activity> pageList(Map map);
     boolean delete(String[] ids) throws Exception;
+    Activity getActivityById(String id);
+    boolean update(Activity activity, HttpSession session);
 }

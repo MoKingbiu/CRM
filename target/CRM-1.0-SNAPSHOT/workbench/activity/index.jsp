@@ -25,6 +25,7 @@
 	$(function(){
 		var pageNo=1;
 		var pageSize=5;
+		//打开活动创建页
 		$("#addBtu").click(function(){
 			$.ajax({
 				url:"workbench/activity/getUserList.do",
@@ -73,7 +74,7 @@
 						alert("活动添加成功");
 						$("#activityAddForm")[0].reset();
 						$("#createActivityModal").modal("hide");
-						pageList(pageNo,pageSize);
+						pageList(1,$("#activityPage").bs_pagination('getOption', 'rowsPerPage'));
 					}else{
 						alert("活动添加失败");
 					}
@@ -87,7 +88,7 @@
 			$("#hidden-owner").val($.trim($("#search-owner").val()));
 			$("#hidden-startDate").val($.trim($("#search-startDate").val()));
 			$("#hidden-endDate").val($.trim($("#search-endDate").val()));
-			pageList(pageNo,pageSize);
+			pageList(1,$("#activityPage").bs_pagination('getOption', 'rowsPerPage'));
 		})
 
 		//全选
@@ -122,7 +123,7 @@
 						success:function(data){
 							//data:{"success":true/false}
 							if(data.success){
-								pageList(pageNo,pageSize);
+								pageList(1,$("#activityPage").bs_pagination('getOption', 'rowsPerPage'));
 							}else{
 								alert("活动删除失败");
 							}
@@ -130,6 +131,73 @@
 					})
 				}
 			}
+		})
+
+		//打开修改活动页
+		$("#editBtu").click(function(){
+			var $ac=$("input[name=xz]:checked");
+			if($ac.length==0){
+				alert("请选择要修改的活动");
+			}else if($ac.length>1){
+				alert("一次只能修改一个活动");
+			}else{
+				var id=$ac.val();
+				$.ajax({
+					url:"workbench/activity/edit.do",
+					data:{
+						"id":id
+					},
+					type:"get",
+					dataType:"json",
+					success:function(data){
+						//data:{"uList":{}{},"ac":{}}
+						var html="";
+						$.each(data.uList,function(i,n){
+							html+="<option value='"+n.id+"'>"+n.name+"</option>";
+						})
+						$("#edit-owner").html(html);
+
+						$("#edit-id").val(data.ac.id);
+						$("#edit-owner").val(data.ac.owner);
+						$("#edit-name").val(data.ac.name);
+						$("#edit-startDate").val(data.ac.startDate);
+						$("#edit-endDate").val(data.ac.endDate);
+						$("#edit-cost").val(data.ac.cost);
+						$("#edit-description").val(data.ac.description);
+
+						$("#editActivityModal").modal("show");
+					}
+				})
+			}
+		})
+
+		//修改活动
+		$("#updataBtu").click(function(){
+			$.ajax({
+				url:"workbench/activity/update.do",
+				data:{
+					"id":$.trim($("#edit-id").val()),
+					"owner":$.trim($("#edit-owner").val()),
+					"name":$.trim($("#edit-name").val()),
+					"startDate":$.trim($("#edit-startDate").val()),
+					"endDate":$.trim($("#edit-endDate").val()),
+					"cost":$.trim($("#edit-cost").val()),
+					"description":$.trim($("#edit-description").val())
+				},
+				type:"post",
+				dataType:"json",
+				success:function(data){
+					//data:{"success":true/false}
+					if(data.success){
+						alert("活动修改成功");
+						$("#editActivityModal").modal("hide");
+						pageList($("#activityPage").bs_pagination('getOption', 'currentPage')
+								,$("#activityPage").bs_pagination('getOption', 'rowsPerPage'));
+					}else{
+						alert("活动修改失败");
+					}
+				}
+			})
 		})
 		pageList(pageNo,pageSize);
 
@@ -191,6 +259,7 @@
 </script>
 </head>
 <body>
+    //上次查询记录
 	<input type="hidden" id="hidden-name">
 	<input type="hidden" id="hidden-owner">
 	<input type="hidden" id="hidden-startDate">
@@ -271,44 +340,43 @@
 				<div class="modal-body">
 				
 					<form class="form-horizontal" role="form">
+						<input type="hidden" id="edit-id">
 					
 						<div class="form-group">
 							<label for="edit-marketActivityOwner" class="col-sm-2 control-label">所有者<span style="font-size: 15px; color: red;">*</span></label>
 							<div class="col-sm-10" style="width: 300px;">
-								<select class="form-control" id="edit-marketActivityOwner">
-								  <option>zhangsan</option>
-								  <option>lisi</option>
-								  <option>wangwu</option>
+								<select class="form-control" id="edit-owner">
+
 								</select>
 							</div>
                             <label for="edit-marketActivityName" class="col-sm-2 control-label">名称<span style="font-size: 15px; color: red;">*</span></label>
                             <div class="col-sm-10" style="width: 300px;">
-                                <input type="text" class="form-control" id="edit-marketActivityName" value="发传单">
+                                <input type="text" class="form-control" id="edit-name" >
                             </div>
 						</div>
 
 						<div class="form-group">
 							<label for="edit-startTime" class="col-sm-2 control-label">开始日期</label>
 							<div class="col-sm-10" style="width: 300px;">
-								<input type="text" class="form-control" id="edit-startTime" value="2020-10-10">
+								<input type="text" class="form-control time" id="edit-startDate" readonly>
 							</div>
 							<label for="edit-endTime" class="col-sm-2 control-label">结束日期</label>
 							<div class="col-sm-10" style="width: 300px;">
-								<input type="text" class="form-control" id="edit-endTime" value="2020-10-20">
+								<input type="text" class="form-control time" id="edit-endDate" readonly>
 							</div>
 						</div>
 						
 						<div class="form-group">
 							<label for="edit-cost" class="col-sm-2 control-label">成本</label>
 							<div class="col-sm-10" style="width: 300px;">
-								<input type="text" class="form-control" id="edit-cost" value="5,000">
+								<input type="text" class="form-control" id="edit-cost" >
 							</div>
 						</div>
 						
 						<div class="form-group">
 							<label for="edit-describe" class="col-sm-2 control-label">描述</label>
 							<div class="col-sm-10" style="width: 81%;">
-								<textarea class="form-control" rows="3" id="edit-describe">市场活动Marketing，是指品牌主办或参与的展览会议与公关市场活动，包括自行主办的各类研讨会、客户交流会、演示会、新产品发布会、体验会、答谢会、年会和出席参加并布展或演讲的展览会、研讨会、行业交流会、颁奖典礼等</textarea>
+								<textarea class="form-control" rows="3" id="edit-description"></textarea>
 							</div>
 						</div>
 						
@@ -317,7 +385,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-					<button type="button" class="btn btn-primary" data-dismiss="modal">更新</button>
+					<button type="button" class="btn btn-primary" id="updataBtu">更新</button>
 				</div>
 			</div>
 		</div>
@@ -375,7 +443,7 @@
 			<div class="btn-toolbar" role="toolbar" style="background-color: #F7F7F7; height: 50px; position: relative;top: 5px;">
 				<div class="btn-group" style="position: relative; top: 18%;">
 				  <button type="button" class="btn btn-primary" id="addBtu"><span class="glyphicon glyphicon-plus"></span> 创建</button>
-				  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editActivityModal"><span class="glyphicon glyphicon-pencil"></span> 修改</button>
+				  <button type="button" class="btn btn-default" id="editBtu"><span class="glyphicon glyphicon-pencil"></span> 修改</button>
 				  <button type="button" class="btn btn-danger" id="delectBtu"><span class="glyphicon glyphicon-minus"></span> 删除</button>
 				</div>
 				
