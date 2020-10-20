@@ -4,12 +4,13 @@ import com.moking.settings.domain.User;
 import com.moking.settings.service.UserService;
 import com.moking.vo.pageListVo;
 import com.moking.workbench.domain.Activity;
+import com.moking.workbench.domain.ActivityRemark;
 import com.moking.workbench.service.ActivityService;
-import com.moking.workbench.service.impl.ActivityServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
@@ -95,4 +96,42 @@ public class ActivityController {
         return map;
     }
 
+    @RequestMapping("/detail.do")
+    public ModelAndView detail(String id){
+        ModelAndView mv=new ModelAndView();
+        Activity activity=activityServiceImpl.getActivityById2(id);
+        mv.addObject("ac",activity);
+        mv.setViewName("/workbench/activity/detail.jsp");
+        return mv;
+    }
+
+    @RequestMapping("/getRemarkList.do")
+    @ResponseBody
+    public List<ActivityRemark> getRemarkList(String id){
+        List<ActivityRemark> list=activityServiceImpl.getRemarkList(id);
+        return list;
+    }
+
+    @RequestMapping("/deleteRemark.do")
+    @ResponseBody
+    public Map<String,Boolean> deleteRemark(String id){
+        boolean flag=activityServiceImpl.delectRemark(id);
+        Map<String,Boolean> map=new HashMap<>();
+        map.put("success",flag);
+        return map;
+    }
+
+    @RequestMapping("/saveRemark.do")
+    @ResponseBody
+    public Map<String,Object> saveRemark(ActivityRemark activityRemark,HttpSession session){
+        Map<String,Object> map=activityServiceImpl.saveRemark(activityRemark,session);
+        return map;
+    }
+
+    @RequestMapping("/updateRemark.do")
+    @ResponseBody
+    public Map<String,Object> updateRemark(ActivityRemark activityRemark,HttpSession session){
+        Map<String,Object> map=activityServiceImpl.updateRemark(activityRemark,session);
+        return map;
+    }
 }

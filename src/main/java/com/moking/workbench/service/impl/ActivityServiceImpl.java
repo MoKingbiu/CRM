@@ -8,11 +8,13 @@ import com.moking.vo.pageListVo;
 import com.moking.workbench.dao.ActivityDao;
 import com.moking.workbench.dao.ActivityRemarkDao;
 import com.moking.workbench.domain.Activity;
+import com.moking.workbench.domain.ActivityRemark;
 import com.moking.workbench.service.ActivityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -109,5 +111,64 @@ public class ActivityServiceImpl implements ActivityService {
             flag=true;
         }
         return flag;
+    }
+
+    @Override
+    public Activity getActivityById2(String id) {
+        Activity activity=activityDao.getActivityById2(id);
+        return activity;
+    }
+
+    @Override
+    public List<ActivityRemark> getRemarkList(String id) {
+        List<ActivityRemark> list=activityRemarkDao.getRemarkList(id);
+        return list;
+    }
+
+    @Override
+    public boolean delectRemark(String id) {
+        boolean flag=true;
+        int count=activityRemarkDao.deleteRemark(id);
+        if(count!=1){
+            flag=false;
+        }
+        return flag;
+    }
+
+    @Override
+    public Map<String, Object> saveRemark(ActivityRemark activityRemark,HttpSession session) {
+        Map<String,Object> map=new HashMap<>();
+        boolean flag=true;
+        activityRemark.setId(UUIDUtil.getUUID());
+        activityRemark.setCreateTime(DateTimeUtil.getSysTime());
+        User user= (User) session.getAttribute("user");
+        activityRemark.setCreateBy(user.getName());
+        activityRemark.setEditFlag("0");
+        int count=activityRemarkDao.saveRemark(activityRemark);
+        if(count!=1){
+            flag=false;
+        }
+        map.put("success",flag);
+        map.put("ar",activityRemark);
+        return map;
+    }
+
+    @Override
+    public Map<String, Object> updateRemark(ActivityRemark activityRemark,HttpSession session) {
+        Map<String,Object> map=new HashMap<>();
+        boolean flag=true;
+
+        activityRemark.setEditTime(DateTimeUtil.getSysTime());
+        User user= (User) session.getAttribute("user");
+        activityRemark.setEditBy(user.getName());
+        activityRemark.setEditFlag("1");
+
+        int count=activityRemarkDao.updateRemark(activityRemark);
+        if(count!=1){
+            flag=false;
+        }
+        map.put("success",flag);
+        map.put("ar",activityRemark);
+        return map;
     }
 }

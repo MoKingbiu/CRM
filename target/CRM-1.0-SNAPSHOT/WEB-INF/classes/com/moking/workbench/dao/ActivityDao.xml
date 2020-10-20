@@ -103,4 +103,24 @@
 
     </update>
 
+    <select id="getActivityById2" resultType="com.moking.workbench.domain.Activity">
+        select
+        a.id,
+        u.name as owner,
+        a.name,
+        a.startDate,
+        a.endDate,
+        a.cost,
+        a.description,
+        a.createTime,
+        a.createBy,
+        a.editTime,
+        a.editBy
+        from tbl_activity a
+        join tbl_user u
+        on u.id=a.owner
+        where a.id=#{id}
+
+    </select>
+
 </mapper>
