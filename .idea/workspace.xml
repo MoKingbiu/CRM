@@ -7,37 +7,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="142f3b19-3e7d-4701-8766-fcd23ae418f1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/CRM_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/CRM_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/workbench/dao/ActivityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/workbench/dao/ActivityDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/workbench/dao/ActivityDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/workbench/dao/ActivityDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/workbench/dao/ActivityRemarkDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/workbench/dao/ActivityRemarkDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/workbench/dao/ActivityRemarkDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/workbench/dao/ActivityRemarkDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/workbench/service/ActivityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/workbench/service/ActivityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/workbench/service/impl/ActivityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/workbench/service/impl/ActivityServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/workbench/web/controller/ActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/workbench/web/controller/ActivityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CRM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moking/settings/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moking/settings/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/conf/dispatcherServlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conf/dispatcherServlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/workbench/activity/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workbench/activity/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/workbench/activity/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workbench/activity/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/conf/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conf/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/workbench/clue/convert.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workbench/clue/convert.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/workbench/clue/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workbench/clue/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/workbench/clue/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workbench/clue/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/workbench/contacts/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workbench/contacts/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/workbench/contacts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workbench/contacts/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/workbench/customer/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workbench/customer/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/workbench/customer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workbench/customer/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/workbench/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workbench/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/workbench/transaction/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workbench/transaction/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/workbench/transaction/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workbench/transaction/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/workbench/transaction/save.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workbench/transaction/save.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/dao/ActivityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/dao/ActivityDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/dao/ActivityDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/dao/ActivityDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/dao/ActivityRemarkDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/dao/ActivityRemarkDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/dao/ActivityRemarkDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/dao/ActivityRemarkDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/service/ActivityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/service/ActivityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/service/impl/ActivityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/service/impl/ActivityServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/web/controller/ActivityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/workbench/web/controller/ActivityController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/settings/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/com/moking/settings/domain/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/conf/dispatcherServlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/classes/conf/dispatcherServlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/workbench/activity/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/workbench/activity/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/workbench/activity/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/workbench/activity/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/workbench/dao/ActivityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/workbench/dao/ActivityDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/workbench/dao/ActivityDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/workbench/dao/ActivityDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/workbench/dao/ActivityRemarkDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/workbench/dao/ActivityRemarkDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/workbench/dao/ActivityRemarkDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/workbench/dao/ActivityRemarkDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/workbench/service/ActivityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/workbench/service/ActivityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/workbench/service/impl/ActivityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/workbench/service/impl/ActivityServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/workbench/web/controller/ActivityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/workbench/web/controller/ActivityController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/workbench/contacts/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/workbench/contacts/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/workbench/customer/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/workbench/customer/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/workbench/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/CRM-1.0-SNAPSHOT/workbench/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moking/settings/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moking/settings/domain/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/conf/dispatcherServlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/conf/dispatcherServlet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +51,8 @@
         <option value="Jsp File" />
         <option value="jsp-2.0" />
         <option value="mybatis-config" />
-        <option value="Interface" />
         <option value="mybatis-mapper" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -94,22 +94,23 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/image" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/moking/settings/dao" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.1546875" />
     <property name="project.structure.side.proportion" value="0.31544867" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA(2)\IDEAworkspace\CRM\src\main\java\com\moking\settings\dao" />
+      <recent name="D:\IDEA(2)\IDEAworkspace\CRM\src\main\java\com\moking\workbench\dao" />
+      <recent name="D:\IDEA(2)\IDEAworkspace\CRM\src\main\java\com\moking\workbench\domain" />
+      <recent name="D:\IDEA(2)\IDEAworkspace\CRM\src\main\webapp\image" />
+      <recent name="D:\IDEA(2)\IDEAworkspace\CRM\src\main\webapp\jquery" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IDEA(2)\IDEAworkspace\CRM\src\main\webapp" />
       <recent name="D:\IDEA(2)\IDEAworkspace\CRM\src\main\webapp\static" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IDEA(2)\IDEAworkspace\CRM\src\main\webapp\image" />
-      <recent name="D:\IDEA(2)\IDEAworkspace\CRM\src\main\webapp\jquery" />
-      <recent name="D:\IDEA(2)\IDEAworkspace\CRM\src\main\java\com\moking\utils" />
-      <recent name="D:\IDEA(2)\IDEAworkspace\CRM\src\main\webapp" />
     </key>
   </component>
   <component name="RunManager">
@@ -287,7 +288,10 @@
       <workItem from="1602935118278" duration="9486000" />
       <workItem from="1603001302546" duration="873000" />
       <workItem from="1603010807474" duration="14360000" />
-      <workItem from="1603204155836" duration="2734000" />
+      <workItem from="1603204155836" duration="2941000" />
+      <workItem from="1603269054892" duration="4608000" />
+      <workItem from="1603355387610" duration="4924000" />
+      <workItem from="1603448670321" duration="12309000" />
     </task>
     <task id="LOCAL-00001" summary="准备部署">
       <created>1601644811668</created>
@@ -366,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602947746778</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="活动页完成">
+      <created>1603207075395</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1603207075395</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,17 +396,18 @@
     <MESSAGE value="小更新" />
     <MESSAGE value="活动删除功能" />
     <MESSAGE value="活动修改功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="活动修改功能" />
+    <MESSAGE value="活动页完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="活动页完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="219" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601822980977">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="219" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601822980977" />
-    <state x="527" y="19" key="#com.intellij.ide.util.MemberChooser" timestamp="1603206457752">
+    <state x="527" y="19" key="#com.intellij.ide.util.MemberChooser" timestamp="1603460588628">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="527" y="19" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603206457752" />
+    <state x="527" y="19" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603460588628" />
     <state x="549" y="323" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1601696957478">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -404,82 +416,82 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="433" y="109" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601819380085" />
-    <state x="245" y="0" key="CommitChangelistDialog2" timestamp="1602947745826">
+    <state x="245" y="0" key="CommitChangelistDialog2" timestamp="1603207074445">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="245" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602947745826" />
-    <state width="1218" height="708" key="DebuggerActiveHint" timestamp="1602944997540">
+    <state x="245" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603207074445" />
+    <state width="1218" height="708" key="DebuggerActiveHint" timestamp="1603461799045">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1218" height="708" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1602944997540" />
+    <state width="1218" height="708" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1603461799045" />
     <state x="495" y="71" key="FileChooserDialogImpl" timestamp="1602387406171">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="495" y="71" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602387406171" />
-    <state width="1223" height="559" key="GridCell.Tab.0.bottom" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.0.bottom" timestamp="1603464667794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.0.center" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603464667794" />
+    <state width="1223" height="544" key="GridCell.Tab.0.center" timestamp="1603464667794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.0.left" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603464667794" />
+    <state width="1223" height="544" key="GridCell.Tab.0.left" timestamp="1603464667794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.0.right" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603464667794" />
+    <state width="1223" height="544" key="GridCell.Tab.0.right" timestamp="1603464667794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.1.bottom" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603464667794" />
+    <state width="1223" height="544" key="GridCell.Tab.1.bottom" timestamp="1603464667794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.1.center" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603464667794" />
+    <state width="1223" height="544" key="GridCell.Tab.1.center" timestamp="1603464667794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.1.left" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1603464667794" />
+    <state width="1223" height="544" key="GridCell.Tab.1.left" timestamp="1603464667794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.1.right" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1603464667794" />
+    <state width="1223" height="544" key="GridCell.Tab.1.right" timestamp="1603464667794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.2.bottom" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1603464667794" />
+    <state width="1223" height="544" key="GridCell.Tab.2.bottom" timestamp="1603464667795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.2.center" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603464667795" />
+    <state width="1223" height="544" key="GridCell.Tab.2.center" timestamp="1603464667794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.2.left" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1603464667794" />
+    <state width="1223" height="544" key="GridCell.Tab.2.left" timestamp="1603464667794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.2.right" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1603464667794" />
+    <state width="1223" height="544" key="GridCell.Tab.2.right" timestamp="1603464667795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.3.bottom" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1603464667795" />
+    <state width="1223" height="544" key="GridCell.Tab.3.bottom" timestamp="1603464667795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.3.center" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603464667795" />
+    <state width="1223" height="544" key="GridCell.Tab.3.center" timestamp="1603464667795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.3.left" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1603464667795" />
+    <state width="1223" height="544" key="GridCell.Tab.3.left" timestamp="1603464667795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
-    <state width="1223" height="559" key="GridCell.Tab.3.right" timestamp="1603206850554">
+    <state width="1223" height="544" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1603464667795" />
+    <state width="1223" height="544" key="GridCell.Tab.3.right" timestamp="1603464667795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1223" height="559" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1603206850554" />
+    <state width="1223" height="544" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1603464667795" />
     <state width="1011" height="349" key="GridCell.Tab.4.bottom" timestamp="1601642789960">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -532,14 +544,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="344" y="51" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1601644030262" />
-    <state x="102" y="0" key="SettingsEditor" timestamp="1602860493271">
+    <state x="102" y="0" key="SettingsEditor" timestamp="1603449663256">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="102" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1602860493271" />
-    <state x="261" y="81" key="Vcs.Push.Dialog.v2" timestamp="1602947752588">
+    <state x="102" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603449663256" />
+    <state x="261" y="81" key="Vcs.Push.Dialog.v2" timestamp="1603207083164">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="261" y="81" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602947752588" />
+    <state x="261" y="81" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603207083164" />
     <state x="448" y="156" key="git4idea.merge.GitPullDialog" timestamp="1601645033672">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -552,5 +564,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="128" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1601735875963" />
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1603461438764">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603461438764" />
   </component>
 </project>

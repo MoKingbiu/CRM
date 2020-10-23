@@ -13,6 +13,7 @@
 
     <!--注解驱动@RequestMapper,@ResponseBody-->
     <mvc:annotation-driven/>
+
     <!--登录拦截器-->
     <mvc:interceptors>
         <mvc:interceptor>

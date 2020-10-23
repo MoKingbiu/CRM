@@ -2,7 +2,7 @@ package com.moking.settings.domain;
 
 import org.springframework.stereotype.Component;
 
-@Component("user")
+@Component
 public class User {
     private String id;
     private String loginAct;
