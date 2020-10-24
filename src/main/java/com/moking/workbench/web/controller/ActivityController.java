@@ -115,7 +115,7 @@ public class ActivityController {
     @RequestMapping("/deleteRemark.do")
     @ResponseBody
     public Map<String,Boolean> deleteRemark(String id){
-        boolean flag=activityServiceImpl.delectRemark(id);
+        boolean flag=activityServiceImpl.deleteRemark(id);
         Map<String,Boolean> map=new HashMap<>();
         map.put("success",flag);
         return map;

@@ -27,6 +27,7 @@ public class ActivityServiceImpl implements ActivityService {
     private ActivityRemarkDao activityRemarkDao;
 
     @Override
+    @Transactional
     public boolean save(Activity activity, HttpSession session) {
         boolean flag=false;
         activity.setId(UUIDUtil.getUUID());
@@ -90,6 +91,7 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
+    @Transactional
     public boolean update(Activity activity, HttpSession session) {
         boolean flag=false;
         activity.setId(activity.getId());
@@ -126,7 +128,8 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public boolean delectRemark(String id) {
+    @Transactional
+    public boolean deleteRemark(String id) {
         boolean flag=true;
         int count=activityRemarkDao.deleteRemark(id);
         if(count!=1){
@@ -135,7 +138,9 @@ public class ActivityServiceImpl implements ActivityService {
         return flag;
     }
 
+
     @Override
+    @Transactional
     public Map<String, Object> saveRemark(ActivityRemark activityRemark,HttpSession session) {
         Map<String,Object> map=new HashMap<>();
         boolean flag=true;
@@ -154,6 +159,7 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
+    @Transactional
     public Map<String, Object> updateRemark(ActivityRemark activityRemark,HttpSession session) {
         Map<String,Object> map=new HashMap<>();
         boolean flag=true;
@@ -170,5 +176,17 @@ public class ActivityServiceImpl implements ActivityService {
         map.put("success",flag);
         map.put("ar",activityRemark);
         return map;
+    }
+
+    @Override
+    public List getAcByClueId(String id) {
+        List list=activityDao.getAcByClueId(id);
+        return list;
+    }
+
+    @Override
+    public List getAcListNotInClue(Map<String, String> map) {
+        List list=activityDao.getAcListNotInClue(map);
+        return list;
     }
 }

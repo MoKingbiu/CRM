@@ -15,7 +15,9 @@ public interface ActivityService {
     boolean update(Activity activity, HttpSession session);
     Activity getActivityById2(String id);
     List<ActivityRemark> getRemarkList(String id);
-    boolean delectRemark(String id);
+    boolean deleteRemark(String id);
     Map<String, Object> saveRemark(ActivityRemark activityRemark,HttpSession session);
     Map<String, Object> updateRemark(ActivityRemark activityRemark,HttpSession session);
+    List getAcByClueId(String id);
+    List getAcListNotInClue(Map<String, String> map);
 }
