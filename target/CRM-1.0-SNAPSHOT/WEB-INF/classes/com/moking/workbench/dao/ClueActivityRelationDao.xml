@@ -5,8 +5,13 @@
 
 <mapper namespace="com.moking.workbench.dao.ClueActivityRelationDao">
 	
-	
-  	
+	<select id="getListById" resultType="com.moking.workbench.domain.ClueActivityRelation">
+        select * from tbl_clue_activity_relation where clueId=#{cid}
+    </select>
+
+    <delete id="delete">
+        delete from tbl_clue_activity_relation where clueId=#{cid}
+    </delete>
 </mapper>
 
 

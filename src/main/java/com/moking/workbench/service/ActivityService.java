@@ -20,4 +20,5 @@ public interface ActivityService {
     Map<String, Object> updateRemark(ActivityRemark activityRemark,HttpSession session);
     List getAcByClueId(String id);
     List getAcListNotInClue(Map<String, String> map);
+    List<Activity> getAcList(String aname);
 }

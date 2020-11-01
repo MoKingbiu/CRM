@@ -38,6 +38,7 @@ com\moking\workbench\service\ActivityService.class
 com\moking\settings\dao\DicTypeDao.class
 com\moking\settings\domain\DicType.class
 com\moking\utils\UUIDUtil.class
+com\moking\exception\clueTranException.class
 com\moking\workbench\service\ClueService.class
 com\moking\workbench\service\impl\ActivityServiceImpl.class
 com\moking\workbench\dao\ActivityDao.class

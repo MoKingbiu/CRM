@@ -189,4 +189,10 @@ public class ActivityServiceImpl implements ActivityService {
         List list=activityDao.getAcListNotInClue(map);
         return list;
     }
+
+    @Override
+    public List<Activity> getAcList(String aname) {
+        List<Activity> list=activityDao.getAcList(aname);
+        return list;
+    }
 }

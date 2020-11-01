@@ -14,4 +14,5 @@ public interface ActivityDao {
     Activity getActivityById2(String id);
     List getAcByClueId(String id);
     List getAcListNotInClue(Map<String, String> map);
+    List<Activity> getAcList(String aname);
 }

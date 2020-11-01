@@ -38,6 +38,7 @@ D:\IDEA(2)\IDEAworkspace\CRM\src\main\java\com\moking\utils\MD5Util.java
 D:\IDEA(2)\IDEAworkspace\CRM\src\main\java\com\moking\workbench\dao\ContactsDao.java
 D:\IDEA(2)\IDEAworkspace\CRM\src\main\java\com\moking\workbench\dao\ClueRemarkDao.java
 D:\IDEA(2)\IDEAworkspace\CRM\src\main\java\com\moking\exception\activityDeleteException.java
+D:\IDEA(2)\IDEAworkspace\CRM\src\main\java\com\moking\exception\clueTranException.java
 D:\IDEA(2)\IDEAworkspace\CRM\src\main\java\com\moking\settings\domain\DicValue.java
 D:\IDEA(2)\IDEAworkspace\CRM\src\main\java\com\moking\settings\dao\UserDao.java
 D:\IDEA(2)\IDEAworkspace\CRM\src\main\java\com\moking\workbench\dao\ClueActivityRelationDao.java
