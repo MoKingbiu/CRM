@@ -3,6 +3,7 @@ package com.moking.exception.handle;
 import com.moking.exception.activityDeleteException;
 import com.moking.exception.clueTranException;
 import com.moking.exception.loginException;
+import com.moking.exception.tranSaveException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,11 @@ public class ExceptionHandle {
 
     @ExceptionHandler(clueTranException.class)
     public void clueTranException(Exception e){
+
+    }
+
+    @ExceptionHandler(tranSaveException.class)
+    public void tranSaveException(Exception e){
 
     }
 

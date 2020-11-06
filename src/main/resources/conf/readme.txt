@@ -43,3 +43,9 @@
 9.?key=value&key=value(不用走后台，但数据不能涉及隐私，不能过于庞大)
     EL取值用${param.key}，不能${key}。
     只有域对象才可以，直接挂参数不在域中。
+
+10.若key为不定变量，则json.key不可取值。必须使用json[key].
+
+11.RunException异常不需要throws,try-catch.因为此异常希望出现异常是程序终止。
+
+12.多表联查时，非必填项可能为空，需用外连接（left/right join），保护主表。

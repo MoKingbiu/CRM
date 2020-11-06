@@ -1,6 +1,7 @@
 package com.moking.workbench.service.impl;
 
 import com.moking.exception.activityDeleteException;
+import com.moking.exception.exception;
 import com.moking.settings.domain.User;
 import com.moking.utils.DateTimeUtil;
 import com.moking.utils.UUIDUtil;
@@ -27,7 +28,9 @@ public class ActivityServiceImpl implements ActivityService {
     private ActivityRemarkDao activityRemarkDao;
 
     @Override
-    @Transactional
+    @Transactional(
+            rollbackFor = exception.class
+    )
     public boolean save(Activity activity, HttpSession session) {
         boolean flag=false;
         activity.setId(UUIDUtil.getUUID());
@@ -64,8 +67,10 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    @Transactional
-    public boolean delete(String[] ids) throws Exception {
+    @Transactional(
+            rollbackFor = exception.class
+    )
+    public boolean delete(String[] ids) throws exception {
         boolean flag=true;
         //确定备注表数目
         int count1=activityRemarkDao.getCountByAids(ids);
@@ -91,7 +96,9 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    @Transactional
+    @Transactional(
+            rollbackFor = exception.class
+    )
     public boolean update(Activity activity, HttpSession session) {
         boolean flag=false;
         activity.setId(activity.getId());
@@ -128,7 +135,9 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    @Transactional
+    @Transactional(
+            rollbackFor = exception.class
+    )
     public boolean deleteRemark(String id) {
         boolean flag=true;
         int count=activityRemarkDao.deleteRemark(id);
@@ -140,7 +149,9 @@ public class ActivityServiceImpl implements ActivityService {
 
 
     @Override
-    @Transactional
+    @Transactional(
+            rollbackFor = exception.class
+    )
     public Map<String, Object> saveRemark(ActivityRemark activityRemark,HttpSession session) {
         Map<String,Object> map=new HashMap<>();
         boolean flag=true;
@@ -159,7 +170,9 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    @Transactional
+    @Transactional(
+            rollbackFor = exception.class
+    )
     public Map<String, Object> updateRemark(ActivityRemark activityRemark,HttpSession session) {
         Map<String,Object> map=new HashMap<>();
         boolean flag=true;

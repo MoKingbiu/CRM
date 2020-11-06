@@ -7,6 +7,7 @@ com\moking\workbench\domain\ClueRemark.class
 com\moking\workbench\domain\ClueActivityRelation.class
 com\moking\settings\service\DicService.class
 com\moking\workbench\dao\ClueActivityRelationDao.class
+com\moking\workbench\service\impl\TranServiceImpl.class
 com\moking\workbench\dao\ClueDao.class
 com\moking\settings\service\impl\UserServiceImpl.class
 com\moking\workbench\dao\ActivityRemarkDao.class
@@ -20,6 +21,7 @@ com\moking\workbench\dao\CustomerDao.class
 com\moking\utils\DateTimeUtil.class
 com\moking\workbench\domain\Clue.class
 com\moking\workbench\dao\ClueRemarkDao.class
+com\moking\workbench\web\controller\TranController.class
 com\moking\workbench\dao\ContactsActivityRelationDao.class
 com\moking\workbench\dao\ContactsDao.class
 com\moking\workbench\dao\TranDao.class
@@ -29,10 +31,12 @@ com\moking\workbench\domain\Customer.class
 com\moking\workbench\domain\TranHistory.class
 com\moking\workbench\dao\TranHistoryDao.class
 com\moking\vo\pageListVo.class
+com\moking\exception\tranSaveException.class
 com\moking\settings\web\controller\UserController.class
 com\moking\utils\MD5Util.class
 com\moking\workbench\web\controller\ActivityController.class
 com\moking\settings\domain\User.class
+com\moking\workbench\service\TranService.class
 com\moking\workbench\domain\Contacts.class
 com\moking\workbench\service\ActivityService.class
 com\moking\settings\dao\DicTypeDao.class
@@ -40,11 +44,13 @@ com\moking\settings\domain\DicType.class
 com\moking\utils\UUIDUtil.class
 com\moking\exception\clueTranException.class
 com\moking\workbench\service\ClueService.class
+com\moking\workbench\service\impl\CustomerServiceImpl.class
 com\moking\workbench\service\impl\ActivityServiceImpl.class
 com\moking\workbench\dao\ActivityDao.class
 com\moking\settings\domain\DicValue.class
 com\moking\exception\activityDeleteException.class
 com\moking\workbench\domain\ContactsRemark.class
+com\moking\workbench\service\CustomerService.class
 com\moking\web\filter\loginFilter.class
 com\moking\workbench\domain\Activity.class
 com\moking\web\listener\SysInitListener.class

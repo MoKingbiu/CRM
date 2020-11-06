@@ -7,9 +7,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class SysInitListener implements ServletContextListener {
     private DicServiceImpl dicService;
@@ -27,6 +25,17 @@ public class SysInitListener implements ServletContextListener {
         for(String code: set){
             application.setAttribute(code,map.get(code));
         }
+
+        //加载possibility
+        ResourceBundle rb=ResourceBundle.getBundle("conf/stage2possibility") ;
+        Map<String,String> pmap=new HashMap<>();
+        Enumeration<String> set2=rb.getKeys();
+        while(set2.hasMoreElements()){
+            String key=set2.nextElement();
+            String value=rb.getString(key);
+            pmap.put(key,value);
+        }
+        application.setAttribute("pmap",pmap);
     }
 
     @Override

@@ -40,6 +40,10 @@
         $("#qx").prop("checked",$("input[name=xz]").length==$("input[name=xz]:checked").length);
     });
 
-9.?key=value&key=value
+9.?key=value&key=value(不用走后台，但数据不能涉及隐私，不能过于庞大)
     EL取值用${param.key}，不能${key}。
     只有域对象才可以，直接挂参数不在域中。
+
+10.若key为不定变量，则json.key不可取值。必须使用json[key].
+
+11.RunException异常

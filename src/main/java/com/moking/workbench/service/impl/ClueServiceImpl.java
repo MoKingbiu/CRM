@@ -51,7 +51,9 @@ public class ClueServiceImpl implements ClueService{
     }
 
     @Override
-    @Transactional
+    @Transactional(
+            rollbackFor = exception.class
+    )
     public Map<String, Object> saveClue(Clue clue, HttpSession session) {
         Map<String, Object> map=new HashMap<>();
         boolean flag=true;
@@ -97,7 +99,9 @@ public class ClueServiceImpl implements ClueService{
     }
 
     @Override
-    @Transactional
+    @Transactional(
+            rollbackFor = exception.class
+    )
     public void tran(String cid, Tran t, String name) throws exception {
         //(1) 获取到线索id，通过线索id获取线索对象（线索对象当中封装了线索的信息）
         Clue clue = clueDao.getClueById(cid);
