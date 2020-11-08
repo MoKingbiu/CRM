@@ -1,7 +1,26 @@
+<%@ page import="com.moking.settings.domain.DicValue" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.Set" %>
+<%@ page import="com.moking.workbench.domain.Tran" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-String basePath = request.getScheme() + "://" + request.getServerName() + ":" +
-request.getServerPort() + request.getContextPath() + "/";
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" +
+	request.getServerPort() + request.getContextPath() + "/";
+
+	List<DicValue> dvList= (List<DicValue>) application.getAttribute("stage");
+	Map<String,String> pmap= (Map<String, String>) application.getAttribute("pmap");
+	Set<String> set=pmap.keySet();
+	int point=0;
+	for(int i=0;i<dvList.size();i++){
+		DicValue dv=dvList.get(i);
+		String stage=dv.getValue();
+		String possibility=pmap.get(stage);
+		if("0".equals(possibility)){
+			point=i;
+			break;
+		}
+	}
 %>
 <!DOCTYPE html>
 <html>
@@ -88,9 +107,125 @@ request.getServerPort() + request.getContextPath() + "/";
                         }
                     }, 100);
                 });
+
+		//加载交易历史
+		showHistoryList();
 	});
-	
-	
+
+	//加载交易历史
+	function showHistoryList(){
+		$.ajax({
+			url:"workbench/transaction/showHistoryList.do",
+			data:{
+				"tranId":"${t.id}"
+			},
+			type:"get",
+			dataType:"json",
+			success:function(data){
+				//data{{1}{2}{3}}
+				var html="";
+				$.each(data,function(i,n){
+					html+='<tr>';
+					html+='<td>'+n.stage+'</td>';
+					html+='<td>'+n.money+'</td>';
+					html+='<td>'+n.possibility+'</td>';
+					html+='<td>'+n.expectedDate+'</td>';
+					html+='<td>'+n.createTime+'</td>';
+					html+='<td>'+n.createBy+'</td>';
+					html+='</tr>';
+				})
+				$("#historyBody").html(html);
+			}
+		});
+	}
+
+	//改变阶段
+	function changeStage(stage,i){
+		$.ajax({
+			url:"workbench/transaction/changeStage.do",
+			data:{
+				"id":"${t.id}",
+				"stage":stage,
+				"money":"${t.money}",
+				"expectedDate":"${t.expectedDate}"
+			},
+			type:"post",
+			dataType:"json",
+			success:function(data){
+				//data:{"success":true/false,"t":{}}
+				if(data.success){
+					$("#stage").html(data.t.stage);
+					$("#possibility").html(data.t.possibility);
+					$("#editBy").html(data.t.editBy);
+					$("#editTime").html(data.t.editTime);
+					showHistoryList();
+
+					//更新进度条
+					change(stage,i);
+
+				}else{
+					alert("阶段更改失败")
+				}
+			}
+		});
+	}
+
+	//更新进度条
+	function change(stage,index){
+		var possibility=$("#possibility").html();
+		var point="<%=point%>";
+
+		if(possibility=="0"){
+
+			for(var i=0;i<point;i++){
+				//黑圈---------
+				$("#"+i).removeClass();
+				$("#"+i).addClass("glyphicon glyphicon-record mystage");
+				$("#"+i).css("color","#000000");
+			}
+
+			for(var i=point;i<"<%=dvList.size()%>";i++){
+				if(i==index){
+					//红叉---------
+					$("#"+i).removeClass();
+					$("#"+i).addClass("glyphicon glyphicon-remove mystage");
+					$("#"+i).css("color","#FF0000");
+				}else{
+					//黑叉---------
+					$("#"+i).removeClass();
+					$("#"+i).addClass("glyphicon glyphicon-remove mystage");
+					$("#"+i).css("color","#000000");
+				}
+			}
+
+		}else{
+			for(var i=0;i<point;i++){
+				if(i==index){
+					//绿标---------
+					$("#"+i).removeClass();
+					$("#"+i).addClass("glyphicon glyphicon-map-marker mystage");
+					$("#"+i).css("color","#90F790");
+				}else if(i<index){
+					//绿圈----------
+					$("#"+i).removeClass();
+					$("#"+i).addClass("glyphicon glyphicon-ok-circle mystage");
+					$("#"+i).css("color","#90F790");
+				}else{
+					//黑圈---------
+					$("#"+i).removeClass();
+					$("#"+i).addClass("glyphicon glyphicon-record mystage");
+					$("#"+i).css("color","#000000");
+				}
+			}
+
+			for(var i=point;i<"<%=dvList.size()%>";i++){
+				//黑叉--------
+				$("#"+i).removeClass();
+				$("#"+i).addClass("glyphicon glyphicon-remove mystage");
+				$("#"+i).css("color","#000000");
+			}
+		}
+	}
 	
 </script>
 
@@ -116,24 +251,119 @@ request.getServerPort() + request.getContextPath() + "/";
 	<!-- 阶段状态 -->
 	<div style="position: relative; left: 40px; top: -50px;">
 		阶段&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<span class="glyphicon glyphicon-ok-circle mystage" data-toggle="popover" data-placement="bottom" data-content="资质审查" style="color: #90F790;"></span>
+
+		<%
+			Tran t= (Tran) request.getAttribute("t");
+			String stage=t.getStage();
+			String possibility=pmap.get(stage);
+
+			//交易失败状态
+			if("0".equals(possibility)){
+				for(int i=0;i<dvList.size();i++){
+					DicValue dv=dvList.get(i);
+					String s=dv.getValue();
+					String p=pmap.get(s);
+
+					if("0".equals(p)){
+						if(stage.equals(s)){
+							//红叉----------
+		%>
+		<span class="glyphicon glyphicon-remove mystage" id="<%=i%>" onclick="changeStage('<%=s%>','<%=i%>')"
+			  data-toggle="popover" data-placement="bottom"
+			  data-content="<%=dv.getText()%>" style="color: #FF0000;"></span>
 		-----------
-		<span class="glyphicon glyphicon-ok-circle mystage" data-toggle="popover" data-placement="bottom" data-content="需求分析" style="color: #90F790;"></span>
+
+		<%
+
+						}else{
+							//黑叉----------
+		%>
+		<span class="glyphicon glyphicon-remove mystage" id="<%=i%>" onclick="changeStage('<%=s%>','<%=i%>')"
+			  data-toggle="popover" data-placement="bottom"
+			  data-content="<%=dv.getText()%>" style="color: #000000;"></span>
 		-----------
-		<span class="glyphicon glyphicon-ok-circle mystage" data-toggle="popover" data-placement="bottom" data-content="价值建议" style="color: #90F790;"></span>
+
+		<%
+						}
+					}else{
+						//黑圈-----------
+		%>
+		<span class="glyphicon glyphicon-record mystage" id="<%=i%>" onclick="changeStage('<%=s%>','<%=i%>')"
+			  data-toggle="popover" data-placement="bottom"
+			  data-content="<%=dv.getText()%>" style="color: #000000;"></span>
 		-----------
-		<span class="glyphicon glyphicon-ok-circle mystage" data-toggle="popover" data-placement="bottom" data-content="确定决策者" style="color: #90F790;"></span>
+
+		<%
+					}
+				}
+
+			//交易未失败
+			}else{
+				int index=0;
+				for(int i=0;i<dvList.size();i++){
+					DicValue dv=dvList.get(i);
+					String s=dv.getValue();
+					if(stage.equals(s)){
+						index=i;
+						break;
+					}
+				}
+				for(int i=0;i<dvList.size();i++){
+					DicValue dv=dvList.get(i);
+					String s=dv.getValue();
+					String p=pmap.get(s);
+
+					if("0".equals(p)){
+						//黑叉-----------
+		%>
+		<span class="glyphicon glyphicon-remove mystage" id="<%=i%>" onclick="changeStage('<%=s%>','<%=i%>')"
+			  data-toggle="popover" data-placement="bottom"
+			  data-content="<%=dv.getText()%>" style="color: #000000;"></span>
 		-----------
-		<span class="glyphicon glyphicon-map-marker mystage" data-toggle="popover" data-placement="bottom" data-content="提案/报价" style="color: #90F790;"></span>
+
+		<%
+					}else{
+						//自身
+						if(i==index){
+							//绿标-----------
+		%>
+		<span class="glyphicon glyphicon-map-marker mystage" id="<%=i%>" onclick="changeStage('<%=s%>','<%=i%>')"
+			  data-toggle="popover" data-placement="bottom"
+			  data-content="<%=dv.getText()%>" style="color: #90F790;"></span>
 		-----------
-		<span class="glyphicon glyphicon-record mystage" data-toggle="popover" data-placement="bottom" data-content="谈判/复审"></span>
+
+		<%
+
+						//小于
+						}else if(i<index){
+							//绿圈------------
+		%>
+		<span class="glyphicon glyphicon-ok-circle mystage" id="<%=i%>" onclick="changeStage('<%=s%>','<%=i%>')"
+			  data-toggle="popover" data-placement="bottom"
+			  data-content="<%=dv.getText()%>" style="color: #90F790;"></span>
 		-----------
-		<span class="glyphicon glyphicon-record mystage" data-toggle="popover" data-placement="bottom" data-content="成交"></span>
+
+		<%
+
+						//大于
+						}else{
+							//黑圈----------
+		%>
+		<span class="glyphicon glyphicon-record mystage" id="<%=i%>" onclick="changeStage('<%=s%>','<%=i%>')"
+			  data-toggle="popover" data-placement="bottom"
+			  data-content="<%=dv.getText()%>" style="color: #000000;"></span>
 		-----------
-		<span class="glyphicon glyphicon-record mystage" data-toggle="popover" data-placement="bottom" data-content="丢失的线索"></span>
-		-----------
-		<span class="glyphicon glyphicon-record mystage" data-toggle="popover" data-placement="bottom" data-content="因竞争丢失关闭"></span>
-		-----------
+
+		<%
+						}
+					}
+				}
+
+			}
+		%>
+
+		<%--<span class="glyphicon glyphicon-ok-circle mystage" data-toggle="popover" data-placement="bottom" data-content="资质审查" style="color: #90F790;"></span>
+		-------------%>
 		<span class="closingDate">${t.expectedDate}</span>
 	</div>
 	
@@ -159,7 +389,7 @@ request.getServerPort() + request.getContextPath() + "/";
 			<div style="width: 300px; color: gray;">客户名称</div>
 			<div style="width: 300px;position: relative; left: 200px; top: -20px;"><b>${t.customerId}</b></div>
 			<div style="width: 300px;position: relative; left: 450px; top: -40px; color: gray;">阶段</div>
-			<div style="width: 300px;position: relative; left: 650px; top: -60px;"><b>${t.stage}</b></div>
+			<div style="width: 300px;position: relative; left: 650px; top: -60px;"><b id="stage">${t.stage}</b></div>
 			<div style="height: 1px; width: 400px; background: #D5D5D5; position: relative; top: -60px;"></div>
 			<div style="height: 1px; width: 400px; background: #D5D5D5; position: relative; top: -60px; left: 450px;"></div>
 		</div>
@@ -167,7 +397,7 @@ request.getServerPort() + request.getContextPath() + "/";
 			<div style="width: 300px; color: gray;">类型</div>
 			<div style="width: 300px;position: relative; left: 200px; top: -20px;"><b>${t.type}</b></div>
 			<div style="width: 300px;position: relative; left: 450px; top: -40px; color: gray;">可能性</div>
-			<div style="width: 300px;position: relative; left: 650px; top: -60px;"><b>90</b></div>
+			<div style="width: 300px;position: relative; left: 650px; top: -60px;"><b id="possibility">${t.possibility}</b></div>
 			<div style="height: 1px; width: 400px; background: #D5D5D5; position: relative; top: -60px;"></div>
 			<div style="height: 1px; width: 400px; background: #D5D5D5; position: relative; top: -60px; left: 450px;"></div>
 		</div>
@@ -191,7 +421,7 @@ request.getServerPort() + request.getContextPath() + "/";
 		</div>
 		<div style="position: relative; left: 40px; height: 30px; top: 70px;">
 			<div style="width: 300px; color: gray;">修改者</div>
-			<div style="width: 500px;position: relative; left: 200px; top: -20px;"><b>${t.editBy}&nbsp;&nbsp;</b><small style="font-size: 10px; color: gray;">${t.editTime}</small></div>
+			<div style="width: 500px;position: relative; left: 200px; top: -20px;"><b id="editBy">${t.editBy}&nbsp;&nbsp;</b><small id="editTime" style="font-size: 10px; color: gray;">${t.editTime}</small></div>
 			<div style="height: 1px; width: 550px; background: #D5D5D5; position: relative; top: -20px;"></div>
 		</div>
 		<div style="position: relative; left: 40px; height: 30px; top: 80px;">
@@ -282,31 +512,15 @@ request.getServerPort() + request.getContextPath() + "/";
 							<td>创建人</td>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
+					<tbody id="historyBody">
+						<%--<tr>
 							<td>资质审查</td>
 							<td>5,000</td>
 							<td>10</td>
 							<td>2017-02-07</td>
 							<td>2016-10-10 10:10:10</td>
 							<td>zhangsan</td>
-						</tr>
-						<tr>
-							<td>需求分析</td>
-							<td>5,000</td>
-							<td>20</td>
-							<td>2017-02-07</td>
-							<td>2016-10-20 10:10:10</td>
-							<td>zhangsan</td>
-						</tr>
-						<tr>
-							<td>谈判/复审</td>
-							<td>5,000</td>
-							<td>90</td>
-							<td>2017-02-07</td>
-							<td>2017-02-09 10:10:10</td>
-							<td>zhangsan</td>
-						</tr>
+						</tr>--%>
 					</tbody>
 				</table>
 			</div>

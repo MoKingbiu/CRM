@@ -17,7 +17,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class TranServiceImpl implements TranService {
@@ -86,5 +88,35 @@ public class TranServiceImpl implements TranService {
     public Tran detail(String id) {
         Tran t=tranDao.detail(id);
         return t;
+    }
+
+    @Override
+    public List<TranHistory> showHistoryList(String tranId) {
+        List<TranHistory> list=tranHistoryDao.showHistoryList(tranId);
+        return list;
+    }
+
+    @Override
+    public boolean changeStage(Tran t) {
+        boolean flag=true;
+
+        TranHistory th=new TranHistory();
+        th.setId(UUIDUtil.getUUID());
+        th.setStage(t.getStage());
+        th.setMoney(t.getMoney());
+        th.setExpectedDate(t.getExpectedDate());
+        th.setCreateBy(t.getEditBy());
+        th.setCreateTime(DateTimeUtil.getSysTime());
+        th.setTranId(t.getId());
+        int count=tranHistoryDao.save(th);
+        if(count!=1){
+            flag=false;
+        }
+
+        int count2=tranDao.changeStage(t);
+        if(count2!=1){
+            flag=false;
+        }
+        return flag;
     }
 }

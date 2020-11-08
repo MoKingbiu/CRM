@@ -76,6 +76,11 @@
         where tran.id=#{id}
     </select>
 
+    <update id="changeStage">
+        update tbl_tran
+        set stage=#{stage},editBy=#{editBy},editTime=#{editTime}
+        where id=#{id}
+    </update>
 </mapper>
 
 

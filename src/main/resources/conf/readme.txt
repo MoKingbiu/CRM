@@ -49,3 +49,4 @@
 11.RunException异常不需要throws,try-catch.因为此异常希望出现异常是程序终止。
 
 12.多表联查时，非必填项可能为空，需用外连接（left/right join），保护主表。
+
