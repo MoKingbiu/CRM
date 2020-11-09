@@ -119,4 +119,14 @@ public class TranServiceImpl implements TranService {
         }
         return flag;
     }
+
+    @Override
+    public Map<String, Object> getChart() {
+        Map<String, Object> map=new HashMap<>();
+        int total=tranDao.getTotal();
+        List<Map<String,Object>> list=tranDao.getChart();
+        map.put("total",total);
+        map.put("list",list);
+        return map;
+    }
 }

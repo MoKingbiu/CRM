@@ -106,4 +106,11 @@ public class TranController {
         map.put("t",t);
         return map;
     }
+
+    @RequestMapping("/getChart.do")
+    @ResponseBody
+    public Map<String,Object> getChart(){
+        Map<String,Object> map=tranServiceImpl.getChart();
+        return map;
+    }
 }
